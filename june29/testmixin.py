@@ -1,5 +1,5 @@
 #!python
-# file testmixin.py (2.X + 3.X)
+# file testmixin0_mapattrs.py (2.X + 3.X)
 
 """
 Generic lister mixin tester: similar to transitive reloader in chapter25, but passes a class object to tester (not

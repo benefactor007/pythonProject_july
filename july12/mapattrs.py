@@ -51,6 +51,7 @@ def dflr(cls):
     here = [cls]
     for sup in cls.__bases__:
         here += dflr(sup)
+        # print("here:",here)
     return here
 
 
@@ -64,6 +65,32 @@ def inheritance(instance):
         return (instance,) + instance.__class__.__mro__
     else:
         return [instance] + dflr(instance.__class__)
+
+
+def mapattrs(instance, withobject = False, bysource = False):
+    """
+    dict with keys giving all inherited attributes of instance, with values giving the object that each is inherited from.
+    :param instance:
+    :param withobject: False = remove object built-in class attributes
+    :param bysource: True = group result by objects instead of attributes
+    :return:
+    Supports classes with slots that preclude __dict__ in instances.
+    """
+    attr2obj = {}
+    inherits = inheritance(instance)
+    for attr in dir(instance):
+        for obj in inherits:
+            if hasattr(obj, '__dict__') and attr in obj.__dict__:  #see slot
+                attr2obj[attr] = obj
+                break
+    # pprint.pprint(attr2obj)
+    # pprint.pprint(filterdictvals(attr2obj, object))
+    if not withobject:          # not False = True
+        attr2obj = filterdictvals(attr2obj, object)
+    print('bysource', bysource)
+    return attr2obj if not bysource else invertdict(attr2obj)
+
+
 
 
 if __name__ == '__main__':
@@ -89,7 +116,7 @@ if __name__ == '__main__':
         return res_dict
 
     # trace(set_random_dict())
-    import mapattrs
+    # import mapattrs
     print(mapattrs.__doc__)
 
     D = set_random_dict()
@@ -127,7 +154,41 @@ if __name__ == '__main__':
 
     print('-' * 60 )
     print(inheritance(I))
+    # >> (<__main__.D object at 0x7f3b584d3fd0>, <class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
     print(D.__mro__)
-    # (<__main__.D object at 0x7f3b584d3fd0>, <class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
-    # print(hasattr(I.__class__, '__mro__'))
+    # >> (<class '__main__.D'>, <class '__main__.B'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>)
+    print(hasattr(I.__class__, '__mro__'))
+    # ex. dflr as below
     # [<__main__.D object at 0x7fb78fb27f98>, <class '__main__.D'>, <class '__main__.B'>, <class '__main__.A'>, <class 'object'>, <class '__main__.C'>, <class '__main__.A'>, <class 'object'>]
+
+    # print(open('md5sum.txt','r').read())
+    # # to scan a text file line by line
+    # for line in open('md5sum.txt'):
+    #     print(line, end = '')
+
+    print('#' * 60)
+    print('Classic classes in 2.X, new-style in 3.X')
+    print('Py=>%s' % I.attr1)               # Python's search == ours?
+    trace(inheritance(I),              'INH\n')             # [Inheritance order)]
+    trace(mapattrs(I),                'ATTRS\n')           # Attrs (w/o object) => Source
+    trace(mapattrs(I, withobject= True), 'ATTRS w/ object\n')                           # Attrs (w/ object) => Source
+    trace(mapattrs(I, bysource=True),  'OBJS\n')           # Source => [Attrs]
+    # print(dir(I))
+    # print(inheritance(I))
+    #
+    print('New-style classes in 2.X and 3.X')
+    class A(object):                    attr1 = 1
+    class B(A):                         attr2 = 2
+    class C(A):                         attr1 = 3
+    class D(B,C):                       pass
+    I = D()
+    print('Py=>%s' % I.attr1)
+    trace(inheritance(I),               'INH\n')
+    trace(mapattrs(I),                  'ATTRS\n')
+    trace(mapattrs(I, bysource=True),    'OBJS\n')
+    #
+    # for i in inheritance(I):
+    #     if hasattr(i, '__dict__'):
+    #         print(i, i.__dict__)
+    trace(dflr(D))
+    print(B.__base__)
