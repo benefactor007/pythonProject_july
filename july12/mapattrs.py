@@ -90,7 +90,16 @@ def mapattrs(instance, withobject = False, bysource = False):
     print('bysource', bysource)
     return attr2obj if not bysource else invertdict(attr2obj)
 
-
+def set_random_dict(set_loopNum = 20):
+# set_loopNum = 100
+    import random, string, names
+    # list1 = [x for x in range(set_loopNum)]
+    # list2 = [y**2 for y in range(100)]
+    list1 = [names.get_full_name() for i in range(set_loopNum)]
+    list2 = [random.randint(1,10) for i in range(set_loopNum)]
+    # print(list2)
+    res_dict = dict(zip(list1, list2))
+    return res_dict
 
 
 if __name__ == '__main__':
@@ -104,16 +113,7 @@ if __name__ == '__main__':
     pprint.pprint(dict_example1)
 
     # set random dict
-    def set_random_dict(set_loopNum = 20):
-    # set_loopNum = 100
-        import random, string, names
-        # list1 = [x for x in range(set_loopNum)]
-        # list2 = [y**2 for y in range(100)]
-        list1 = [names.get_full_name() for i in range(set_loopNum)]
-        list2 = [random.randint(1,10) for i in range(set_loopNum)]
-        # print(list2)
-        res_dict = dict(zip(list1, list2))
-        return res_dict
+
 
     # trace(set_random_dict())
     # import mapattrs

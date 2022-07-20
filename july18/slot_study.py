@@ -25,7 +25,7 @@ if __name__ == '__main__':
         x.age
     except AttributeError as e:
         print(e, '# Must assign before use')
-    x.age = 18              # looks like nstance data
+    x.age = 18              # looks like instance data
     print(x.age)
     try:
         x.ape = 1000
@@ -76,3 +76,5 @@ if __name__ == '__main__':
     print(getattr(X,'a'),getattr(X, 'c'), getattr(X, 'd'))      # Fetches all 3 forms
     for attr in list(getattr(X, '__dict__', [])) + getattr(X, '__slots__', []):
         print(attr, '=>', getattr(X, attr))
+
+
