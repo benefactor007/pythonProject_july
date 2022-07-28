@@ -12,6 +12,38 @@ reverse = original[::-1]
 
 randomListSum = []
 
+
+def count_occur_times(pwd: str):
+    """
+    count each item(format: str) appear times
+    :param pwd:
+    :return: As dict, key: item ; value: appear times
+    """
+    count_dict = {}
+    for i in pwd:
+        if not i in count_dict.keys():
+            count_dict[i] = 1
+        else:
+            count_dict[i] += 1
+    return count_dict
+
+
+def filter_pwd(pwd: str):
+    global randomListSum
+    #print('count_occur_times:', count_occur_times(pwd))
+    #print('count_occur_times(pwd).values()', count_occur_times(pwd).values())
+    for i in count_occur_times(pwd).values():
+        if i > 2:
+            print('too many duplicate')
+            #pprint.pprint(count_occur_times(pwd))
+            break
+    else:
+        print("Success to create password!!!")
+        pprint.pprint(count_occur_times(pwd))
+        print("reverse_randomListSum:" , randomListSum[::-1])
+        return pwd
+    return set_pwd(pwd)
+
 def set_pwd(pwd: str):
     """
     :param pwd: input the original password
@@ -20,9 +52,11 @@ def set_pwd(pwd: str):
     global randomListSum
     # pwd_res, res = [], []
     pwd_res, res, randomList = [], [], []
-    for i in pwd[::-1]:
+    reverse_pwd = pwd[::-1]
+    #for i in pwd[::-1]:
+    for i in reverse_pwd:
         random_num = random.randint(1, 9)
-        print('random_num:', random_num)
+        #print('random_num:', random_num)
         randomList.append(random_num)
         res.append(int(i) + random_num)
     randomListSum.append(randomList)
@@ -33,7 +67,7 @@ def set_pwd(pwd: str):
         print('pwd has digit 4')
         return set_pwd(pwd_res)
     else:
-        return pwd_res
+        return filter_pwd(pwd_res)
 
 
 import importlib, importlib.util
@@ -73,34 +107,10 @@ def list_func_in_module(path: str):
             print([func for func in dir(module) if not func.startswith('__')])
 
 
-def count_occur_times(pwd: str):
-    """
-    count each item(format: str) appear times
-    :param pwd:
-    :return: As dict, key: item ; value: appear times
-    """
-    count_dict = {}
-    for i in pwd:
-        if not i in count_dict.keys():
-            count_dict[i] = 1
-        else:
-            count_dict[i] += 1
-    return count_dict
 
 
-def filter_pwd(pwd: str):
-    print('count_occur_times:', count_occur_times(pwd))
-    print('count_occur_times(pwd).values()', count_occur_times(pwd).values())
-    for i in count_occur_times(pwd).values():
-        if i > 2:
-            print('too many duplicate')
-            pprint.pprint(count_occur_times(pwd))
-            break
-    else:
-        print("Success to create password!!!")
-        pprint.pprint(count_occur_times(pwd))
-        return pwd
-    return filter_pwd(set_pwd(pwd))
+
+
 
 if __name__ == '__main__':
     import pprint
@@ -141,7 +151,13 @@ if __name__ == '__main__':
     #                  'Angela Samuels': 7, 'William Phillips': 8, 'Alma Hernandez': 8, 'Ernestine Hamberg': 9,
     #                  'Chana Rembert': 7}
 
-    print('New password:', filter_pwd(set_pwd('87122064')))
+    # print('New password:', filter_pwd(set_pwd('87122064')))
     # print('New password:', set_pwd('87122064'))
     # pprint.pprint("randomListSum: ", randomListSum)
-    print("randomListSum: ", randomListSum)
+    # print("randomListSum: ", randomListSum)
+
+    set_pwd('87122064')
+    randomListSum = []
+    random_pwd = ''.join([str(a) for a in [random.randint(1,10) for x in range(10)]])
+    print('random_pwd', random_pwd)
+    set_pwd(random_pwd)

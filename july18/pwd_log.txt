@@ -46,3 +46,122 @@ Success to create password!!!
 {'0': 1, '1': 1, '2': 2, '3': 2, '5': 1, '7': 1}
 New password: 53223701
 randomListSum:  [[5, 8, 5, 6, 1, 2, 3, 8], [3, 3, 8, 2, 2, 8, 7, 5], [1, 2, 9, 2, 8, 6, 7, 2]]
+
+
+/home/jpcc/PycharmProjects/pythonProject_july/venv/bin/python /home/jpcc/PycharmProjects/pythonProject_july/july18/pwd_gen.py
+
+ There is a turn
+ RandomList is [1, 9, 1, 9, 1, 6, 4, 2]
+
+The current pwd is 55113710
+too many duplicate
+
+ There is a turn
+ RandomList is [4, 3, 9, 2, 3, 3, 9, 9]
+
+The current pwd is 44654444
+pwd has digit 4
+
+ There is a turn
+ RandomList is [7, 2, 4, 1, 4, 8, 4, 7]
+
+The current pwd is 16859481
+pwd has digit 4
+
+ There is a turn
+ RandomList is [8, 9, 8, 3, 7, 1, 5, 7]
+
+The current pwd is 97222918
+too many duplicate
+
+ There is a turn
+ RandomList is [5, 6, 3, 1, 6, 8, 2, 9]
+
+The current pwd is 37238098
+Success to create password!!!
+{'0': 1, '2': 1, '3': 2, '7': 1, '8': 2, '9': 1}
+[[1, 9, 1, 9, 1, 6, 4, 2], [4, 3, 9, 2, 3, 3, 9, 9], [7, 2, 4, 1, 4, 8, 4, 7], [8, 9, 8, 3, 7, 1, 5, 7], [5, 6, 3, 1, 6, 8, 2, 9]]
+
+/home/jpcc/PycharmProjects/pythonProject_july/venv/bin/python /home/jpcc/PycharmProjects/pythonProject_july/july18/pwd_gen.py
+
+ There is a turn
+ RandomList is [8, 9, 7, 7, 8, 6, 2, 9]
+
+The current pwd is 25790797
+too many duplicate
+
+ There is a turn
+ RandomList is [8, 8, 8, 3, 1, 5, 5, 2]
+
+The current pwd is 57530204
+pwd has digit 4
+
+ There is a turn
+ RandomList is [9, 3, 9, 9, 5, 1, 3, 7]
+
+The current pwd is 33198602
+Success to create password!!!
+{'0': 1, '1': 1, '2': 1, '3': 2, '6': 1, '8': 1, '9': 1}
+[[8, 9, 7, 7, 8, 6, 2, 9], [8, 8, 8, 3, 1, 5, 5, 2], [9, 3, 9, 9, 5, 1, 3, 7]]
+
+/home/jpcc/PycharmProjects/pythonProject_july/venv/bin/python /home/jpcc/PycharmProjects/pythonProject_july/july18/pwd_gen.py
+
+ There is a turn
+ RandomList is [5, 5, 6, 6, 7, 4, 4, 7]
+
+The current pwd is 91689515
+Success to create password!!!
+{'1': 2, '5': 2, '6': 1, '8': 1, '9': 2}
+[[5, 5, 6, 6, 7, 4, 4, 7]]
+
+/home/jpcc/PycharmProjects/pythonProject_july/venv/bin/python /home/jpcc/PycharmProjects/pythonProject_july/july18/pwd_gen.py
+
+ There is a turn
+ RandomList is [9, 8, 3, 5, 3, 9, 8, 9]
+
+The current pwd is 34375057
+pwd has digit 4
+
+ There is a turn
+ RandomList is [4, 1, 8, 9, 1, 2, 2, 1]
+
+The current pwd is 16848564
+pwd has digit 4
+
+ There is a turn
+ RandomList is [4, 3, 7, 1, 7, 6, 6, 6]
+
+The current pwd is 89291427
+pwd has digit 4
+
+ There is a turn
+ RandomList is [3, 8, 5, 4, 1, 8, 1, 8]
+
+The current pwd is 00950006
+too many duplicate
+
+ There is a turn
+ RandomList is [7, 8, 2, 1, 2, 9, 3, 4]
+
+The current pwd is 38217834
+pwd has digit 4
+
+ There is a turn
+ RandomList is [9, 1, 7, 9, 2, 8, 3, 4]
+
+The current pwd is 34563017
+pwd has digit 4
+
+ There is a turn
+ RandomList is [8, 5, 7, 4, 7, 2, 1, 3]
+
+The current pwd is 56773756
+too many duplicate
+
+ There is a turn
+ RandomList is [4, 6, 4, 3, 6, 1, 7, 1]
+
+The current pwd is 01163836
+Success to create password!!!
+{'0': 1, '1': 2, '3': 2, '6': 2, '8': 1}
+[[9, 8, 3, 5, 3, 9, 8, 9], [4, 1, 8, 9, 1, 2, 2, 1], [4, 3, 7, 1, 7, 6, 6, 6], [3, 8, 5, 4, 1, 8, 1, 8], [7, 8, 2, 1, 2, 9, 3, 4], [9, 1, 7, 9, 2, 8, 3, 4], [8, 5, 7, 4, 7, 2, 1, 3], [4, 6, 4, 3, 6, 1, 7, 1]]
