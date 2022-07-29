@@ -173,7 +173,7 @@ def delFile(fileName):
 # for i in range(len(L)):
 #     setMd5sum(L[i])
 # delFile('packageName.txt')
-# delFile('test1.py')
+# delFile('NXP_BM_SWDL.py')
 
 
 def main():
@@ -194,7 +194,7 @@ def main():
     open('md5sum.txt','a').write(website+ '\n' + getNowTime() + '\n')
     #tarFile(LName)
     #delFile('packageName.txt')
-    #delFile('test1.py')
+    #delFile('NXP_BM_SWDL.py')
     #delFile('webCrawl_cookie_2nd.py')
 
 

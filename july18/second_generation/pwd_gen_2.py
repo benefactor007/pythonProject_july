@@ -28,7 +28,7 @@ def count_occur_times(pwd: str):
     return count_dict
 
 
-def filter_pwd(pwd: str):
+def filter_pwd(new_pwd: str, old_pwd: str):
     global randomListSum
     #print('count_occur_times:', count_occur_times(pwd))
     #print('count_occur_times(pwd).values()', count_occur_times(pwd).values())
@@ -65,7 +65,7 @@ def set_pwd(pwd: str):
     print('The current pwd is', pwd_res)
     if '4' in pwd_res:
         print('pwd has digit 4')
-        return set_pwd(pwd_res)
+        return set_pwd(pwd)
     else:
         return filter_pwd(pwd_res)
 

@@ -8,8 +8,7 @@ dict = {}
 
 fileInfoToList = []
 
-#import webCrawl_cookie_2nd
-import session_study
+import session_jenkins
 
 def save_as_file(sw_list:list):
     myfile = open("packageName.txt", 'w')
@@ -97,16 +96,10 @@ def fileExist(str):
     return os.path.exists(str)
 
 
-def adv_wget(user_account: str,user_password: str, downloadLink: str, timesTry: int = 5) :
-    #print("wget -c -t "+ str(timesTry) + " --no-check-certificate " + "--http-user=" + user_account + " --http-password=" + user_password + " " + downloadLink)
-    os.system("wget -c -t "+ str(timesTry) + " --no-check-certificate " + "--http-user=" + user_account + " --http-password=" + user_password + " " + "'"+downloadLink +"'")
-
-
 def packageDownload(L):
     for i in range(len(L)):
         if not fileExist(L[i]):
-            # os.system("wget -c " + L[i])
-            adv_wget("wu_j7", "'Tianyuan==xuu'", L[i])
+            os.system("wget -c " + L[i])
             os.system("sync")
         else:
             print("Duplicate file")
@@ -139,8 +132,7 @@ def tarFile(L):
     # L = getPackageNameList()
     for i in range(len(L)):
         try:
-            #if cutLastDash(L[i]) == "REL.tgz":
-            if L[i][-3:] == "tgz":
+            if cutLastDash(L[i]) == ".tgz":
                 if fileExist(L[i]):
                     if not fileExist("UpdateContainer"):
                         print("======================= Start to extract =======================")
@@ -151,8 +143,7 @@ def tarFile(L):
                         # raise ValueError('Duplicate extract file')
                 else:
                     print("File does not exist!!!")
-            #elif cutLastDash(L[i]) == "flashcontainer.tgz":
-            elif L[i][-3:] == "flashcontainer.tgz":
+            elif cutLastDash(L[i]) == "flashcontainer.tgz":
                 if fileExist(L[i]):
                     if not fileExist("FlashContainer"):
                         print("======================= Start to extract =======================")
@@ -189,7 +180,7 @@ def main():
     website = input("Please input the SVN address:")
     #SW address
     #website = "http://cnninvmlgcldc01:82/37w-gbt-cl1/linux/weekly_release/20220526.1_7140-rc3-37W-GBT-CL1/VW_CHN/CNS3.0_37W-VW_CHN-C714_RC3-MAIN-20220526.1-REL.tgz"
-    sw_list = session_study.fetch_the_sw_list(website)
+    sw_list = session_jenkins.fetch_the_sw_list(website)
     save_as_file(sw_list)
     L = readFile()
     print("\n Step1 \n")
@@ -200,38 +191,35 @@ def main():
     for i in range(len(LName)):
         setMd5sum(LName[i])
         setSha1sum(LName[i])
-    #tarFile(LName)
-    # delFile('packageName.txt')
-    # delFile('NXP_BM_SWDL.py')
+    open('md5sum.txt','a').write(website+ '\n' + getNowTime() + '\n')
+    tarFile(LName)
+    #delFile('packageName.txt')
+    #delFile('NXP_BM_SWDL.py')
+    #delFile('session_jenkins.py')
 
 
 def main2():
-    #website = input("Please input the SVN address:")
-    #sw_list = session_study.fetch_the_sw_list(website)
-    #save_as_file(sw_list)
     L = readFile()
     LName = getPackageNameList(L)
     print(LName)
-    #tarFile(LName)
+    # tarFile(LName)
     for i in LName:
         try:
-            #print(cutLastDash(i))
-            print(i[-3:])
+            print(cutLastDash(i))
         except ValueError:
             print("Cannot be cut by last dash")
 
 
 def main3():
     website = input("Please input the SVN address:")
-    sw_list = session_study.fetch_the_sw_list(website)
+    sw_list = session_jenkins.fetch_the_sw_list(website)
     save_as_file(sw_list)
 
 
 print("name1", __name__)
 
 if __name__ == '__main__':
-    main()
-    #main3()
+    main3()
     #os.system("mv `pwd`/UpdateContainer/* `pwd`")
     #os.system("sync")
     # Map address

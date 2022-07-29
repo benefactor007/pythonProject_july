@@ -1,0 +1,2 @@
+http://cnninvmjnkns03.joynext.com:8082/view/MQB/job/SOP2-BM-DEVELOPERS/295/artifact/CNS3.0_MQB_SOP2_BM_VW_CHN_C690_RC3-20220727.tgz
+http://cnninvmjnkns03.joynext.com:8082/view/MQB/job/SOP2-BM-DEVELOPERS/295/artifact/sha1sum.txt
