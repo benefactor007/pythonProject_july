@@ -140,7 +140,15 @@ if __name__ == '__main__':
     #         # result = module_directory('result', "/home/jpcc/PycharmProjects/pythonProject_july/july12" + '/' + module)
     #         print([func for func in dir(my_module) if not func.startswith('__')])
     #
-    list_func_in_module("/home/jpcc/PycharmProjects/pythonProject_july/july12")
+    list_func_in_module("/home/jpcc/PycharmProjects/pythonProject_july")
+    import os
+    print(os.listdir("/home/jpcc/PycharmProjects/pythonProject_july"))
+    for i in os.listdir("/home/jpcc/PycharmProjects/pythonProject_july"):
+        if i.startswith('j'):
+            # print("/home/jpcc/PycharmProjects/pythonProject_july" + "/" + i)
+            list_func_in_module("/home/jpcc/PycharmProjects/pythonProject_july" + "/" + i)
+    #     # print("/home/jpcc/PycharmProjects/pythonProject_july" + "/" + i)
+    # list_func_in_module("/home/jpcc/PycharmProjects/pythonProject_july/july29")
     #
     # from mapattrs import set_random_dict
     #
