@@ -1,0 +1,15 @@
+[sudo] password for jpcc: jpcc
+
+[!p[?3;4l[4l>[0m(B[?1h=[H[2J[?12l[?25h
+Welcome to minicom 2.7
+
+OPTIONS: I18n 
+Compiled on Nov 15 2018, 20:18:47.
+PWC:
+Port /dev/ttyUSB0, 14:20:36
+
+Press CTRL-A Z for help on special keys
+
+pwc: 08:51:56,642 uart_in: 'PWC:'
+pwc: 08:51:56,642 already in pwc rx mode!!
+cS 1 88

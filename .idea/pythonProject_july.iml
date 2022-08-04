@@ -14,6 +14,7 @@
       <sourceFolder url="file://$MODULE_DIR$/august2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/july29" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/july29/pexpect_case" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/august4" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
     <orderEntry type="inheritedJdk" />

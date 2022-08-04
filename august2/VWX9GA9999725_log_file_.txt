@@ -1,0 +1,139 @@
+H[sudo] password for jpcc: jpcc
+
+[!p[?3;4l[4l>[0m(B[?1h=[H[2J[sudo] password for jpcc: jpcc
+
+[!p[?3;4l[4l>[0m(B[?1h=[H[2J[?12l[?25h
+Welcome to minicom 2.7
+
+OPTIONS: I18n 
+Compiled on Nov 15 2018, 20:18:47.
+Port /dev/ttyUSB0, 16:09:04
+
+Press CTRL-A Z for help on special keys
+
+PWC:
+bin: 01FB08CD 00 03 030102000000410C06060000000006060000000003030202120B
+bin: 01FB08D4 00 03 031D30000002
+bin: 01FB08D8 00 03 031D30000002
+bin: 01FB08DD 00 03 031D30000002
+bin: 01FB08E2 00 03 030131000002000000000000000000000002000000000000000000000000[14;80H0[14;80H0[14;80H0[14;80H0[14;80H0[14;80H0[14;80H0[14;80H0[14;80H0[14;80H0[14;80H0[14;80H0[14;80H0[14;80H0[14;80H
+pwc: 09:13:49,056 uart_in info: switched back to pwc rx mode
+cS 1 88
+bin: 01FB0926 00 03 031D30000002
+bin: 01FB092B 00 03 031D30000002
+bin: 01FB092E 00 03 031D30000002
+bin: 01FB095D 00 03 03143100000000000003E80000029F000000000000
+pwc: 09:13:49,165 uart_in: 'cS 1 88'
+pwc: 09:13:49,166 pwc_config[1] changed from 0x08 to 0x88
+bin: 01FB096E 00 22 C088001100020001FFFFFFFFFFFF00FF
+pwc: 09:13:49,166 pwc_config[] = C0 88 00 11 00 02 00 01 FF FF FF FF FF FF 00 FF[23;80H
+[sudo] password for jpcc: jpcc
+
+[!p[?3;4l[4l>[0m(B[?1h=[H[2J[?12l[?25h
+Welcome to minicom 2.7
+
+OPTIONS: I18n 
+Compiled on Nov 15 2018, 20:18:47.
+Port /dev/ttyUSB0, 16:10:49
+
+Press CTRL-A Z for help on special keys
+
+PWC:
+pwc: 09:14:48,142 uart_in: 'PWC:'
+pwc: 09:14:48,142 already in pwc rx mode!!cS 1 88
+
+pwc: 09:14:48,252 uart_in: 'cS 1 88'
+pwc: 09:14:48,252 pwc_config[1] unchanged
+bin: 01FBF03C 00 22 C088001100020001FFFFFFFFFFFF00FF
+pwc: 09:14:48,253 pwc_config[] = C0 88 00 11 00 02 00 01 FF FF FF FF FF FF 00 FF[15;80H
+[sudo] password for jpcc: jpcc
+
+[!p[?3;4l[4l>[0m(B[?1h=[H[2J[?12l[?25h
+Welcome to minicom 2.7
+
+OPTIONS: I18n 
+Compiled on Nov 15 2018, 20:18:47.
+Port /dev/ttyUSB0, 16:11:48
+
+Press CTRL-A Z for help on special keys
+
+PWC:
+
+pwc: 08:46:11,342 uart_in info: switched back to pwc rx modecS 1 88
+
+pwc: 08:46:11,449 uart_in: 'cS 1 88'
+pwc: 08:46:11,449 pwc_config[1] unchanged
+bin: 01E1BDFA 00 22 C088001100010001FFFFFFFFFFFF00FF
+pwc: 08:46:11,450 pwc_config[] = C0 88 00 11 00 01 00 01 FF FF FF FF FF FF 00 FF[15;80H
+[sudo] password for jpcc: jpcc
+
+[!p[?3;4l[4l>[0m(B[?1h=[H[2J[?12l[?25h
+Welcome to minicom 2.7
+
+OPTIONS: I18n 
+Compiled on Nov 15 2018, 20:18:47.
+Port /dev/ttyUSB0, 16:12:44
+
+Press CTRL-A Z for help on special keys
+
+PWC:
+pwc: 08:48:13,606 uart_in: 'PWC:'
+pwc: 08:48:13,606 already in pwc rx mode!!
+cS 1 88
+pwc: 08:48:13,716 uart_in: 'cS 1 88'
+pwc: 08:48:13,716 pwc_config[1] unchanged
+bin: 01E39B94 00 22 C088001100010001FFFFFFFFFFFF00FF
+pwc: 08:48:13,717 pwc_config[] = C0 88 00 11 00 01 00 01 FF FF FF FF FF FF 00 FF[15;80H
+[sudo] password for jpcc: jpcc
+
+[!p[?3;4l[4l>[0m(B[?1h=[H[2J[?12l[?25h
+Welcome to minicom 2.7
+
+OPTIONS: I18n 
+Compiled on Nov 15 2018, 20:18:47.
+Port /dev/ttyUSB0, 16:14:47
+
+Press CTRL-A Z for help on special keys
+
+PWC:
+pwc: 08:48:52,102 uart_in: 'PWC:'
+pwc: 08:48:52,102 already in pwc rx mode!!
+cS 1 88
+pwc: 08:48:52,212 uart_in: 'cS 1 88'
+pwc: 08:48:52,213 pwc_config[1] unchanged
+bin: 01E431F5 00 22 C088001100010001FFFFFFFFFFFF00FF
+pwc: 08:48:52,213 pwc_config[] = C0 88 00 11 00 01 00 01 FF FF FF FF FF FF 00 FF[15;80H
+[sudo] password for jpcc: jpcc
+
+[!p[?3;4l[4l>[0m(B[?1h=[H[2J[?12l[?25h
+Welcome to minicom 2.7
+
+OPTIONS: I18n 
+Compiled on Nov 15 2018, 20:18:47.
+PWC:
+Port /dev/ttyUSB0, 16:15:25
+
+Press CTRL-A Z for help on special keys
+
+pwc: 08:49:18,528 uart_in: 'PWC:'
+pwc: 08:49:18,528 already in pwc rx mode!!
+cS 1 88
+pwc: 08:49:18,638 uart_in: 'cS 1 88'
+pwc: 08:49:18,638 pwc_config[1] unchanged
+bin: 01E4992E 00 22 C088001100010001FFFFFFFFFFFF00FF
+pwc: 08:49:18,639 pwc_config[] = C0 88 00 11 00 01 00 01 FF FF FF FF FF FF 00 FF[15;80H
+[sudo] password for jpcc: jpcc
+
+[!p[?3;4l[4l>[0m(B[?1h=[H[2J[?12l[?25h
+Welcome to minicom 2.7
+
+OPTIONS: I18n 
+Compiled on Nov 15 2018, 20:18:47.
+Port /dev/ttyUSB0, 16:15:52
+
+Press CTRL-A Z for help on special keys
+
+PWC:
+pwc: 08:50:34,809 uart_in: 'PWC:'
+pwc: 08:50:34,809 already in pwc rx mode!!cS 1 88
+pwc_config\[1\]
