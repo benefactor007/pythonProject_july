@@ -80,7 +80,9 @@ def mapattrs(instance, withobject = False, bysource = False):
     inherits = inheritance(instance)
     for attr in dir(instance):
         for obj in inherits:
-            if hasattr(obj, '__dict__') and attr in obj.__dict__:  #see slot
+            # if attr in obj.__dict__:            # not work for tools which support slot
+            if attr in getattr(obj, '__dict__',{}):              #see slot
+            # if hasattr(obj, '__dict__') and attr in obj.__dict__:  #see slot
                 attr2obj[attr] = obj
                 break
     # pprint.pprint(attr2obj)
